@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1657955748154,
-  "repoUrl": "https://github.com/cleanlab/cleanlab-cli",
+  "lastUpdate": 1666556480784,
+  "repoUrl": "https://github.com/anishathalye/cleanlab-studio",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
       {
@@ -4766,6 +4766,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0",
             "extra": "mean: 1.8065816030000406 sec\nrounds: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "committer": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "distinct": true,
+          "id": "a93329f8b540695cb3e6e1180a11f35810c6bbb7",
+          "message": "Move CLI interface into cleanlab_studio.cli module\n\nThis patch prepares the code for the addition of a Python library\ninterface. With that change, only stable APIs should be exported by the\n`cleanlab_studio` package, with the exception of the\n`cleanlab_studio.cli` and `cleanlab_studio.internal` modules. For now,\nbasically all the code has been moved into the `cli` module; as the\nPython library interface is developed, common functionality will be\npulled out of there and into `internal`.",
+          "timestamp": "2022-10-23T16:19:13-04:00",
+          "tree_id": "d111733ee30f75b8af32091e810d2c876307b841",
+          "url": "https://github.com/anishathalye/cleanlab-studio/commit/a93329f8b540695cb3e6e1180a11f35810c6bbb7"
+        },
+        "date": 1666556479941,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-csv]",
+            "value": 12.514638620480167,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000995811692320542",
+            "extra": "mean: 79.90642241666517 msec\nrounds: 12"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-json]",
+            "value": 20.873327228827424,
+            "unit": "iter/sec",
+            "range": "stddev: 0.006358441417077822",
+            "extra": "mean: 47.90803061904453 msec\nrounds: 21"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-csv]",
+            "value": 2.812917292764182,
+            "unit": "iter/sec",
+            "range": "stddev: 0.018742734433813982",
+            "extra": "mean: 355.50280933334005 msec\nrounds: 3"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-json]",
+            "value": 3.1407598939320476,
+            "unit": "iter/sec",
+            "range": "stddev: 0.017501974389311434",
+            "extra": "mean: 318.3942847500063 msec\nrounds: 4"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-csv]",
+            "value": 0.9005960256171466,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.110375763999997 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-json]",
+            "value": 0.5613223521953828,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.781507535000003 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-csv]",
+            "value": 0.9001945450039524,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.1108709840000301 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-json]",
+            "value": 0.5259025576639184,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.9014929390000361 sec\nrounds: 1"
           }
         ]
       }
