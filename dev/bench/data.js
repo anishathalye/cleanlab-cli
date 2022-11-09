@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1666739857847,
+  "lastUpdate": 1668034439606,
   "repoUrl": "https://github.com/anishathalye/cleanlab-studio",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -5246,6 +5246,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0",
             "extra": "mean: 1.6915799610000022 sec\nrounds: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "committer": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "distinct": true,
+          "id": "b9e79665e005d77eb70b48be45e79bcf517ae6a4",
+          "message": "Fix type error\n\nWe need to be careful with dict representations of things versus\ninternal representations (like the Schema object).\n\nThis bug was preventing resuming uploads from working.",
+          "timestamp": "2022-11-09T17:49:44-05:00",
+          "tree_id": "db5c268d6b18dac0ce38c4eabec3714b2fdf5166",
+          "url": "https://github.com/anishathalye/cleanlab-studio/commit/b9e79665e005d77eb70b48be45e79bcf517ae6a4"
+        },
+        "date": 1668034438779,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-csv]",
+            "value": 12.552656813173327,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0006498369071222561",
+            "extra": "mean: 79.66441008333429 msec\nrounds: 12"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-json]",
+            "value": 4.7205252088822816,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00414501156227936",
+            "extra": "mean: 211.84083460000807 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-csv]",
+            "value": 2.8067136939592188,
+            "unit": "iter/sec",
+            "range": "stddev: 0.004802036647330693",
+            "extra": "mean: 356.2885669999976 msec\nrounds: 3"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-json]",
+            "value": 0.5422250214817945,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.8442527739999832 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-csv]",
+            "value": 0.8754840590759391,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.142225252000003 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-json]",
+            "value": 0.05822524868530362,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 17.174679757999996 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-csv]",
+            "value": 0.865905982288903,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.1548597889999996 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-json]",
+            "value": 0.05517192116035598,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 18.125161838999986 sec\nrounds: 1"
           }
         ]
       }
