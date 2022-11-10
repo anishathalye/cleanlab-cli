@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1668038506577,
+  "lastUpdate": 1668038603531,
   "repoUrl": "https://github.com/anishathalye/cleanlab-studio",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -5486,6 +5486,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0",
             "extra": "mean: 17.28688046000002 sec\nrounds: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "committer": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "distinct": true,
+          "id": "2915ae87eede5ef523bdd8edde3713b44bd65304",
+          "message": "Tweak parameter\n\nA different magic number. With 100 parallel uploads, S3 rate limiting\nseems to kick in and cause issues. 30 seems to work.\n\nTested with MNIST (70k images, very small file sizes), upload takes 1\nmin 40 sec.",
+          "timestamp": "2022-11-09T19:00:01-05:00",
+          "tree_id": "7d45d0b0cccb4ba464502089f46269789d3f8f97",
+          "url": "https://github.com/anishathalye/cleanlab-studio/commit/2915ae87eede5ef523bdd8edde3713b44bd65304"
+        },
+        "date": 1668038602774,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-csv]",
+            "value": 14.205545197726726,
+            "unit": "iter/sec",
+            "range": "stddev: 0.001012010334979181",
+            "extra": "mean: 70.39504546154464 msec\nrounds: 13"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-json]",
+            "value": 5.733055968849998,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0187237269993675",
+            "extra": "mean: 174.4270429999991 msec\nrounds: 6"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-csv]",
+            "value": 3.0554848900408595,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0022058072841638363",
+            "extra": "mean: 327.2802962500094 msec\nrounds: 4"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-json]",
+            "value": 0.6721107710816188,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.487849983999979 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-csv]",
+            "value": 0.976813305401435,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.023737079 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-json]",
+            "value": 0.07194186786862893,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 13.900111709999976 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-csv]",
+            "value": 0.9423809682816452,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.0611419729999625 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-json]",
+            "value": 0.06850111138676002,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 14.598303294000004 sec\nrounds: 1"
           }
         ]
       }
