@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1668037947534,
+  "lastUpdate": 1668038506577,
   "repoUrl": "https://github.com/anishathalye/cleanlab-studio",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -5406,6 +5406,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0",
             "extra": "mean: 18.141154484000026 sec\nrounds: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "committer": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "distinct": true,
+          "id": "21c0dbf268c8d7a42261d8e9972f253760e29757",
+          "message": "Parallelize S3 uploads\n\nWith the Snacks dataset (848 MB, 6745 images) for example, this change\nbrings the upload time down from 12 minutes to 1 minute.",
+          "timestamp": "2022-11-09T18:41:15-05:00",
+          "tree_id": "4fef5777db8f44f81451c5da8887d2d084197f65",
+          "url": "https://github.com/anishathalye/cleanlab-studio/commit/21c0dbf268c8d7a42261d8e9972f253760e29757"
+        },
+        "date": 1668038505702,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-csv]",
+            "value": 12.703065905387925,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0009561933556874683",
+            "extra": "mean: 78.72115341666112 msec\nrounds: 12"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-json]",
+            "value": 5.068558169315786,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0060502614165261065",
+            "extra": "mean: 197.29476640000598 msec\nrounds: 5"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-csv]",
+            "value": 2.7709177167256223,
+            "unit": "iter/sec",
+            "range": "stddev: 0.001169003629222841",
+            "extra": "mean: 360.89126499999225 msec\nrounds: 3"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-json]",
+            "value": 0.5633847081482446,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.77498605400001 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-csv]",
+            "value": 0.8420674144435872,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.1875533749999931 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-json]",
+            "value": 0.061026985729640174,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 16.38619355100002 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-csv]",
+            "value": 0.8385525198554424,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.192531148999933 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-json]",
+            "value": 0.057847337020342816,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 17.28688046000002 sec\nrounds: 1"
           }
         ]
       }
