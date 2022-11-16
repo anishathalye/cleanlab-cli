@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1668613451790,
+  "lastUpdate": 1668613455908,
   "repoUrl": "https://github.com/anishathalye/cleanlab-studio",
   "entries": {
     "Python Benchmark with pytest-benchmark": [
@@ -5886,6 +5886,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0",
             "extra": "mean: 15.604062767999977 sec\nrounds: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "committer": {
+            "email": "me@anishathalye.com",
+            "name": "Anish Athalye",
+            "username": "anishathalye"
+          },
+          "distinct": true,
+          "id": "84873aa65e7d9325f18d6214f6ef8138216db6b5",
+          "message": "Add basic retry logic for S3 uploads\n\nThis patch adds retries with exponential backoff to S3 uploads. The\nimplementation in this patch isn't ideal, because it only makes the\nfailed upload back off, but all other coroutines (up to 31, with the\ncurrent choice of parameters) continue uploading as before. Still, it\nseems to mostly alleviate the problem with failed S3 uploads due to rate\nlimiting or transient errors.",
+          "timestamp": "2022-11-16T10:40:58-05:00",
+          "tree_id": "05e4c8990d57cca797372baaf75d5143f76b2958",
+          "url": "https://github.com/anishathalye/cleanlab-studio/commit/84873aa65e7d9325f18d6214f6ef8138216db6b5"
+        },
+        "date": 1668613455118,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-csv]",
+            "value": 15.366145379184415,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0006358507990929509",
+            "extra": "mean: 65.07812957143041 msec\nrounds: 14"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1M-json]",
+            "value": 5.8418872477692085,
+            "unit": "iter/sec",
+            "range": "stddev: 0.011416714173101215",
+            "extra": "mean: 171.1775591666651 msec\nrounds: 6"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-csv]",
+            "value": 3.354432003408616,
+            "unit": "iter/sec",
+            "range": "stddev: 0.002395326819382386",
+            "extra": "mean: 298.11306325000686 msec\nrounds: 4"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[10M-json]",
+            "value": 0.6809773145897784,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 1.4684776990000046 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-csv]",
+            "value": 1.0240486279239949,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0006331122991767003",
+            "extra": "mean: 976.5161269999965 msec\nrounds: 2"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[100M-json]",
+            "value": 0.07268907027007449,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 13.757226448000011 sec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-csv]",
+            "value": 1.0288319219944109,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 971.9760619999818 msec\nrounds: 1"
+          },
+          {
+            "name": "tests/bench.py::test_generate_schema[1G-json]",
+            "value": 0.06922125295488883,
+            "unit": "iter/sec",
+            "range": "stddev: 0",
+            "extra": "mean: 14.446430211999996 sec\nrounds: 1"
           }
         ]
       }
